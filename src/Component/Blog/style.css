@@ -1,0 +1,32 @@
+section .block {
+    display:inline-block;
+    margin:20px;
+    background-color: #f1f1f1;
+    width:467px;
+    height:auto;
+    box-shadow: 1px 2px 3px grey;
+    cursor:pointer;
+    transition: box-shadow 0.5s ease;
+    padding: 10px;
+    min-height: 465px;
+    text-align: center;
+  }
+
+.block h1, .block p  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+.block img {
+  height: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+section .block:hover {
+  box-shadow: 3px 1px 4px 1px #3E606F;
+}

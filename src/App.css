@@ -19,8 +19,155 @@
   color: white;
 }
 
+.menu-container {
+  display:flex;
+}
+
+.imagediv {
+  background-image: url(https://www.ning.com/blog/wp-content/uploads/2017/04/make-money-blogging.jpg);
+  background-color: #3E606F;
+  width:auto;
+  height:400px;
+  background-size:cover;
+}
+
+.imagestyle {
+  width: 100%;
+  height: 500px;
+}
+
+footer {
+  background-color:#000;
+  color:#fff;
+}
+
+.readblog {
+  background-color:orange;
+  color:#fff;
+  padding:15px;
+  border-radius:5px;
+  box-shadow:2px 1px 2px #ccc;
+}
+
+.bannerover {
+  padding:20px;
+  float:left;
+  margin-top:6%;
+  width:50%;
+  color: #fbf17a;
+  text-shadow: 2px 5px 5px #9e5b5b;
+}
+
+nav.aboutus {
+  float: left;
+  width: 24%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+.imageslider {
+  width:100%;
+  height:355px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sliderpara {
+  margin:5px;
+  color:#fff;
+  font-size:20px;
+  width:70%;
+}
+
+button a {
+  text-decoration: none;
+  color:#fff;
+}
+
+.aws-sld {
+  --organic-arrow-color: #f1f1f1 !important;
+}
+
+.sliderRead {
+    margin:5px;
+    padding:10px;
+    color:#fff;
+    background-color:orange;
+    border-radius:5px;
+}
+
+.aws-sld__bullets{
+  bottom: 8px;
+  z-index: 1000;
+  color: white;
+  --organic-arrow-color: #f1f1f1;
+  --organic-arrow-border-radius: 0;
+  --control-bullet-color: #f1f1f1;
+  --control-bullet-active-color: #f1f1f1;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer ul {
+  display:inline-block;
+  width:350px;;
+  list-style-type: none;
+  cursor:pointer;
+  color:grey;
+}
+
+footer ul h4, footer ul h3{
+  color:#fff;
+}
+
+footer ul li:hover {
+  color:#fff;
+}
+
+footer ul li.soc_icon{
+  display:inline-block;
+  padding:5px;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.blogprogress {
+  padding:5px;
+  color:purple;
+  margin:5px;
+  font-weight:bold;
+}
+
+.blogprogress span {
+  margin-right:5px;
+}
+
+.left-div {
+  float: left;
+}
+
+.right-div {
+  float: right;
 }
 
 @keyframes App-logo-spin {

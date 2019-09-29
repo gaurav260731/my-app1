@@ -1,0 +1,27 @@
+.menu a {
+    text-decoration:none;
+    color:#fff;
+  }
+  
+  .menu {
+    transition: background-color 1s ease;
+    text-align:center;
+    background-color:#b76a6a;
+    color:#fff;
+    padding:15px;
+    border:1px solid #fff;
+    width:400px;
+    display:block;
+    cursor:pointer;
+  }
+  
+  .menu:hover {
+    background-color: #fff;
+    color:grey;
+    border:1px solid grey;
+    padding:15px;
+  }
+  .menu a:hover {
+    color:grey;
+    background:#fff;
+  }
