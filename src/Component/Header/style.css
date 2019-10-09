@@ -6,22 +6,22 @@
   .menu {
     transition: background-color 1s ease;
     text-align:center;
-    background-color:#b76a6a;
+    background-color:#e29b08;
     color:#fff;
     padding:15px;
     border:1px solid #fff;
-    width:400px;
-    display:block;
+    width:216px;
+    display:inline-block;
     cursor:pointer;
   }
   
   .menu:hover {
     background-color: #fff;
-    color:grey;
-    border:1px solid grey;
+    color:#e29b08;
+    border:1px solid #e29b08;
     padding:15px;
   }
   .menu a:hover {
-    color:grey;
+    color:#e29b08;
     background:#fff;
   }

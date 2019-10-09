@@ -1,0 +1,44 @@
+.imageslider {
+  width:100%;
+  height:320px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sliderpara {
+  margin:5px;
+  color:#fff;
+  font-size:20px;
+  width:70%;
+}
+
+button a {
+  text-decoration: none;
+  color:#fff;
+}
+
+.aws-sld {
+  --organic-arrow-color: #f1f1f1 !important;
+}
+
+.sliderRead {
+    margin:5px;
+    padding:10px;
+    color:#fff;
+    background-color:orange;
+    border-radius:5px;
+}
+
+.aws-sld__bullets{
+  bottom: 8px;
+  z-index: 1000;
+  color: white;
+  --organic-arrow-color: #f1f1f1;
+  --organic-arrow-border-radius: 0;
+  --control-bullet-color: #f1f1f1;
+  --control-bullet-active-color: #f1f1f1;
+}
