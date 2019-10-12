@@ -60,11 +60,13 @@ class slider extends React.Component {
           </AwesomeSlider>
           <section id="worldnews" >
           <p className="worldnews">World News</p>
+          
             {      
               article && article.map((val, i)=>(
                 <Blog val= {val} key = {i}/>
               ))      
             }
+            
           </section>
           </div>
           )

@@ -12,6 +12,12 @@ section .block {
     text-align: center;
   }
 
+  @media (max-width:1024px) {
+    section .block {
+      width:auto;
+    }
+  }
+
 .block h1, .block p  {
     display: flex;
     align-items: center;
