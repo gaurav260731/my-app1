@@ -94,8 +94,8 @@ export default function App() {
           <li>Abouts Us</li>
           <li>Blog</li>
         </ul>
-        <ul >
-          <h3>Follow Us</h3>
+        <ul ></ul>
+          {/* <h3>Follow Us</h3>
           <li className="soc_icon">
           <a href="abc.html" ><img src="https://www.pngfind.com/pngs/m/383-3837923_tripadvisor-facebook-icon-on-white-hd-png-download.png" alt="facebook" width='20' height='20'/></a>
           </li>
@@ -105,7 +105,7 @@ export default function App() {
           <li className="soc_icon">
           <a href="abc.html" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKDhTdt_73PKM5QHmDJPY04Ej-dpfDrpAjYupiSPV7QrUljX95" alt="instagram" width='20' height='20'/></a>
           </li>
-        </ul>
+        </ul> */}
       </footer>
       
       </React.Fragment>

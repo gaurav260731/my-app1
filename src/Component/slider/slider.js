@@ -36,7 +36,6 @@ class slider extends React.Component {
         fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=30b51688ea6e49eca3a9a7014ae1b9b7')
             .then(response => response.json())
             .then(data => {
-            console.log(data);
             this.setState({
                 banner:data.articles,
             })
@@ -50,7 +49,7 @@ class slider extends React.Component {
             <AwesomeSlider className ="imagestyle">
              {      
                   banner && banner.map((val, i)=>(
-                    <div>
+                    <div key = {i}>
                      <img src={val.urlToImage} key = {i} alt="slider-img" className="imageslider"/>
                      <p className="sliderpara">{val.description}</p>
                      <button className="sliderRead"><a href={val.url} target="_blank" rel="noopener noreferrer">Read More</a></button>

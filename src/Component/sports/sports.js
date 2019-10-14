@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 
 class sports extends React.Component {
@@ -27,10 +28,14 @@ class sports extends React.Component {
             <p className="bitcoin">Sports News</p>
             { 
                 sports && sports.map((val, i)=>(
-                <div className="block">
+                <div className="block" key={i}>
                     <h1>{val.title}</h1>
                     <img src={val.urlToImage} alt="Blogimage" width="100" height="100"/>
                     <p>{val.content}<span><b>- {val.author}</b></span><span><a href={val.url} rel="noopener noreferrer" target="_blank">Read More</a></span></p>
+                    <div className="social-icon">
+                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${val.url}`} rel="noopener noreferrer" target="_blank"><img src="https://image.flaticon.com/icons/svg/145/145802.svg" alt="facebook" className="facebook_logo"/></a>
+                        <a href={`https://api.whatsapp.com/send?text=${val.url}`} className="watsapp_logo"><img src="https://image.flaticon.com/icons/svg/733/733585.svg" alt="watsapp"/></a>
+                    </div>
                 </div>
                 ))
             }   
