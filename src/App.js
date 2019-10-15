@@ -68,7 +68,6 @@ export default function App() {
         <Route path="/hindu" component={hindu}></Route>
         <Route path="/techcrunch" component={techcrunch}></Route>
         <Route path="/timeofindia" component={timeofindia}></Route>
-        
       </div>
          
        </Router>

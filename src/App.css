@@ -116,13 +116,13 @@ button a {
 }
 
 .aws-sld__bullets{
-  bottom: 8px;
+  bottom: -37px;
   z-index: 1000;
-  color: white;
-  --organic-arrow-color: #f1f1f1;
+  color: #e29b08;
+  --organic-arrow-color: #e29b08;
   --organic-arrow-border-radius: 0;
-  --control-bullet-color: #f1f1f1;
-  --control-bullet-active-color: #f1f1f1;
+  --control-bullet-color: #e29b08;
+  --control-bullet-active-color: #e29b08;
 }
 
 article {
@@ -274,5 +274,9 @@ display: block;
 
 section .block:hover {
 box-shadow: 3px 1px 4px 1px #3E606F;
+}
+
+#st-2 {
+  width:auto !important;
 }
 
