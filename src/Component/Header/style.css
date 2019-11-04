@@ -4,6 +4,7 @@
   }
   
   .menu {
+    -webkit-transition: background-color 1s ease;
     transition: background-color 1s ease;
     text-align:center;
     background-color:#e29b08;
@@ -25,3 +26,5 @@
     color:#e29b08;
     background:#fff;
   }
+
+  

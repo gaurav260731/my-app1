@@ -42,3 +42,19 @@ button a {
   --control-bullet-color: #f1f1f1;
   --control-bullet-active-color: #f1f1f1;
 }
+
+.imageloader {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin:auto;
+  width:100%;
+}
+
+@media (max-width:1024px) {
+  .imageloader {
+    width: 341px;
+    margin: auto;
+    display: flex;
+  }
+}

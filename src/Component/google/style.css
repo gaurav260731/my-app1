@@ -1,0 +1,29 @@
+.readmore {
+    background: #8a8d90;
+    padding: 8px;
+    margin: 7px;
+    border-radius: 5px;
+    -webkit-box-shadow: 4px 3px 5px 0px #797474;
+            box-shadow: 4px 3px 5px 0px #797474;
+  }
+  
+  .readmore a {
+    color:#fff;
+    text-decoration:none;
+  }
+
+  .imageloader {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin:auto;
+    width:800px;
+  }
+
+  @media (max-width:1024px) {
+    .imageloader {
+      width: 341px;
+      margin: auto;
+      display: flex;
+    }
+  }

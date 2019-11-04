@@ -3,7 +3,8 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  -webkit-animation: App-logo-spin infinite 20s linear;
+          animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
@@ -11,15 +12,26 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .menu-container {
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
 }
 
@@ -46,7 +58,8 @@ footer {
   color:#fff;
   padding:15px;
   border-radius:5px;
-  box-shadow:2px 1px 2px #ccc;
+  -webkit-box-shadow:2px 1px 2px #ccc;
+          box-shadow:2px 1px 2px #ccc;
 }
 
 .bannerover {
@@ -152,7 +165,13 @@ footer ul h4, footer ul h3{
   color:#fff;
 }
 
-footer ul li:hover {
+footer ul li a:hover, footer ul li a:focus {
+  color:#fff;
+  text-decoration: underline;
+}
+
+footer ul li a {
+  text-decoration: none;
   color:#fff;
 }
 
@@ -184,12 +203,25 @@ footer ul li.soc_icon{
   float: right;
 }
 
-@keyframes App-logo-spin {
+@-webkit-keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -215,6 +247,7 @@ footer ul li.soc_icon{
 }
 
 .menu {
+  -webkit-transition: background-color 1s ease;
   transition: background-color 1s ease;
   text-align:center;
   background-color:#e29b08;
@@ -228,15 +261,14 @@ footer ul li.soc_icon{
 
 .menu:hover {
   background-color: #fff;
-  color:#e29b08;
   border:1px solid #e29b08;
   padding:15px;
 }
 
-.menu a:hover {
+.menu:hover a {
   color:#e29b08;
-  background:#fff;
 }
+
 
 section .block {
   display:inline-block;
@@ -244,9 +276,12 @@ section .block {
   background-color: #f1f1f1;
   width:467px;
   height:auto;
-  box-shadow: 1px 2px 3px grey;
+  box-shadow: -10px -9px 5px -2px #ccc;
   cursor:pointer;
+  -webkit-transition: -webkit-box-shadow 0.5s ease;
+  transition: -webkit-box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
   padding: 10px;
   min-height: 465px;
   text-align: center;
@@ -259,24 +294,65 @@ section .block {
 }
 
 .block h1, .block p  {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.block img {
-height: auto;
-width: 100%;
-margin-left: auto;
-margin-right: auto;
-display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
+.block img {
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+
 section .block:hover {
-box-shadow: 3px 1px 4px 1px #3E606F;
+-webkit-box-shadow: none;
+        box-shadow: none;
 }
 
 #st-2 {
   width:auto !important;
 }
 
+@media (max-width:1024px) {
+  #onesignal-bell-container.onesignal-reset.onesignal-bell-container-bottom-right {
+    bottom:35px !important;
+  }
+}
+
+.rotate {
+  width:60px;
+  height:60px;
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.social-icon a img {
+  width: 40px !important;
+  height: 40px !important;
+}

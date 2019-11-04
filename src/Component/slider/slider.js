@@ -25,7 +25,7 @@ class slider extends React.Component {
             country = 'in'
           }
       
-          fetch('https://newsapi.org/v2/top-headlines?country='+country+'&apiKey=30b51688ea6e49eca3a9a7014ae1b9b7')
+          fetch('https://newsapi.org/v2/top-headlines?country=au&category=science&apiKey=30b51688ea6e49eca3a9a7014ae1b9b7')
           .then(response => response.json())
           .then(data => {
             this.setState({
@@ -33,7 +33,7 @@ class slider extends React.Component {
             })
                 
           })
-        fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=30b51688ea6e49eca3a9a7014ae1b9b7')
+        fetch('https://newsapi.org/v2/top-headlines?country=au&category=sports&apiKey=30b51688ea6e49eca3a9a7014ae1b9b7')
             .then(response => response.json())
             .then(data => {
             this.setState({
@@ -44,13 +44,14 @@ class slider extends React.Component {
 
     render() {
         const {banner, article} = this.state;
+        if(banner.length > 0 ) {
         return(
             <div>
             <AwesomeSlider className ="imagestyle">
              {      
                   banner && banner.map((val, i)=>(
                     <div key = {i}>
-                     <img src={val.urlToImage} key = {i} alt="slider-img" className="imageslider"/>
+                     {val.urlToImage == null?<img src="https://jamaicaclassifiedonline.com/images/noimagefound.jpg" alt="NoImage"/>:<img onError={(e)=>{e.target.onerror = "https://jamaicaclassifiedonline.com/images/noimagefound.jpg"; e.target.src="https://jamaicaclassifiedonline.com/images/noimagefound.jpg"}} src={val.urlToImage} alt="Blogimage" width="100" height="100" key={i} className="imageslider"/>}
                      <p className="sliderpara">{val.description}</p>
                      <button className="sliderRead"><a href={val.url} target="_blank" rel="noopener noreferrer">Read More</a></button>
                      </div>
@@ -58,8 +59,7 @@ class slider extends React.Component {
                 }  
           </AwesomeSlider>
           <section id="worldnews" >
-          <p className="worldnews">World News</p>
-          
+          <p className="worldnews">World News</p>      
             {      
               article && article.map((val, i)=>(
                 <Blog val= {val} key = {i}/>
@@ -69,6 +69,10 @@ class slider extends React.Component {
           </section>
           </div>
           )
+        }
+        return (
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" alt="Loader" className="imageloader"/>
+        )
     }
   
 }
